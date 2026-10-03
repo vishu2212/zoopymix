@@ -1,21 +1,14 @@
-const dishes = [
-  "Chole",
-  "Rajma",
-  "Paneer",
-  "Dal Tadka",
-  "Aloo Sabzi",
-  "Biryani",
-];
+import { Logo } from "@/components/brand/logo";
+import { DishCard } from "@/components/dish/dish-card";
+import { dishes } from "@/lib/data/dishes";
 
 export default function Home() {
   return (
     <main>
       <section className="min-h-screen bg-[var(--zm-white)] px-6 py-8 md:px-12 md:py-10">
         <header className="mx-auto flex max-w-7xl items-center justify-between">
-          <a href="/" className="text-xl font-black tracking-[-0.04em]">
-            ZOOPYMIX
-          </a>
-          <span className="text-xs font-bold uppercase tracking-[0.18em]">
+          <Logo />
+          <span className="hidden text-xs font-bold uppercase tracking-[0.18em] sm:block">
             One Dish · One Blend
           </span>
         </header>
@@ -34,24 +27,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-7xl border-t border-black/10 pt-8">
+        <div id="dishes" className="mx-auto max-w-7xl border-t border-black/10 pt-8">
           <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em]">
             Choose your dish
           </p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
             {dishes.map((dish) => (
-              <a
-                key={dish}
-                href="#"
-                className="group flex min-h-28 items-end justify-between rounded-[1.5rem] bg-[var(--zm-cream)] p-5 transition-transform duration-200 hover:-translate-y-1"
-              >
-                <span className="text-2xl font-black tracking-[-0.04em]">
-                  {dish}
-                </span>
-                <span className="text-xl transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
+              <DishCard key={dish.slug} dish={dish} />
             ))}
           </div>
         </div>
