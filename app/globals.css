@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --zm-ink: #171717;
+  --zm-white: #fffdf8;
+  --zm-pink: #f35b8f;
+  --zm-orange: #ff8a3d;
+  --zm-lime: #c8f23d;
+  --zm-purple: #8b6cff;
+  --zm-cream: #f4eadb;
+  --zm-muted: #716d68;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--zm-white);
+  color: var(--zm-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--zm-lime);
+  color: var(--zm-ink);
+}
