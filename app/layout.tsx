@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zoopymix.com"),
   title: {
     default: "ZoopyMix — One Dish · One Blend · No Guesswork",
     template: "%s — ZoopyMix",
